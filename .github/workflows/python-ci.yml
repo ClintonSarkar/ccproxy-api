@@ -61,6 +61,10 @@ jobs:
       target_preset: ${{ inputs.target_preset || 'all' }}
       python_version: '3.11'
       extras: 'plugins-claude,plugins-codex'
+      # The fork's python-build.yml also needs the homebrew_packages_repo
+      # input so its build job can check out the fork's composite actions
+      # (which contain the 'extras' input fix).
+      homebrew_packages_repo: 'ClintonSarkar/homebrew-packages'
 
   package:
     needs: [test]
