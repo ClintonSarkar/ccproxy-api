@@ -557,7 +557,7 @@ class ClaudeOAuthProvider(ProfileLoggingMixin):
         """Get CLI authentication configuration for this provider."""
         return CliAuthConfig(
             preferred_flow=FlowType.browser,
-            callback_port=54545,
+            callback_port=35593,
             callback_path="/callback",
             supports_manual_code=True,
             supports_device_flow=False,
